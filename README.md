@@ -8,14 +8,11 @@ Execution Flow
 $git clone https://github.com/containerrepos/infra-manager.git
 
 
-step 2: enter src directory
+$vi  infra-manager/terraform/config.json
 
-vi custom-ami/packer/builders.json
+vi custom-/packer/builders.json
 
-"source_ami": "BASEAMI-ID",
-
-$cd custom-ami
-
+"myamiid" : "CUSTOM-AMI-ID"
 
 $ docker image build -t myinfraami .
 
