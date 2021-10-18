@@ -1,7 +1,9 @@
 #!/bin/sh
 
-terraform init /terraform
+cd /terraform
 
-terraform validate -var-file=/terraform/config.json /terraform
+terraform init .
 
-terraform apply -var-file=/terraform/config.json /terraform
+terraform validate -var-file=config.json .
+
+terraform apply -var-file=config.json .
