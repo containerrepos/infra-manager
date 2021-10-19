@@ -10,8 +10,6 @@ $git clone https://github.com/containerrepos/infra-manager.git
 
 $vi  infra-manager/terraform/config.json
 
-vi custom-/packer/builders.json
-
 "myamiid" : "CUSTOM-AMI-ID"
 
 $ docker image build -t myinfraami .
