@@ -1,7 +1,5 @@
 #!/bin/sh
 
-cd /terraform
-
 terraform init .
 
 terraform validate -var-file=config.json .

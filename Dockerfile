@@ -4,7 +4,6 @@ MAINTAINER Krishna Maram
 
 ENV TERRAFORM_VERSION=0.14.6
 
-ENV CSP_CMD "--help"
 
 RUN apk update 
 RUN apk add --no-cache curl py-pip  jq python3 python3-dev gcc curl bash ca-certificates git openssl unzip wget && \
@@ -16,8 +15,8 @@ RUN apk add --no-cache curl py-pip  jq python3 python3-dev gcc curl bash ca-cert
     rm -rf /var/cache/apk/* && \
     rm -rf /var/tmp/*
     
-ADD . /mesos-terraform
+ADD terraform /terraform
 
-WORKDIR /mesos-terraform
+WORKDIR /terraform
 
-ENTRYPOINT ./entrypoint.py ${CSP_CMD}
+ENTRYPOINT [ "/entrypoint.sh" ]
