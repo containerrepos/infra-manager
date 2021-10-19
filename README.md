@@ -10,9 +10,9 @@ $git clone https://github.com/containerrepos/infra-manager.git
 
 $cd  infra-manager
 
-$vi terraform/config.json
+$vi terraform/modules/instances/instances.tf
 
-"myamiid" : "CUSTOM-AMI-ID"
+"ami" : "CUSTOM-AMI-ID"
 
 $ docker image build -t myinfraami .
 
