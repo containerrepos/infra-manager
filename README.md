@@ -8,7 +8,9 @@ Execution Flow
 $git clone https://github.com/containerrepos/infra-manager.git
 
 
-$vi  infra-manager/terraform/config.json
+$cd  infra-manager
+
+$vi terraform/config.json
 
 "myamiid" : "CUSTOM-AMI-ID"
 
