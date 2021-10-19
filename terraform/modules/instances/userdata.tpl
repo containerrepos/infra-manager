@@ -32,11 +32,11 @@ write_files:
   permissions: '0755'
   content: |
      #!/bin/bash
-     git clone https://github.com/cssp-user/DevOps.git
+     git clone https://github.com/containerrepos/infra-bootstrapper.git
 
-     cd DevOps/ansible/plays
+     cd infra-bootstrapper
 
-     ansible-playbook cicd.yml
+     ansible-playbook plays/webserver.yml
 
 
 runcmd:
